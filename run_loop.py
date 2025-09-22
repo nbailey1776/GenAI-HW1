@@ -26,8 +26,8 @@ EXAMPLE_DIR = Path("ChampSim_CRC2/new_policies")
 WARMUP_INST = "1000000"
 SIM_INST = "10000000"
 MODEL = "gpt-4o"
-ITERATIONS = 100
-# TEMPERATURE = 0.2
+ITERATIONS = 200
+TEMPERATURE = 0.2
 
 EXAMPLE_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -207,7 +207,7 @@ def main():
             model=MODEL,
             # reasoning={"effort": "high"},
             input=prompt,
-            # temperature=TEMPERATURE,
+            temperature=TEMPERATURE,
         )
         print(f"     1. 📤 [LLM] Iteration {i}: Sending prompt to model")
 
